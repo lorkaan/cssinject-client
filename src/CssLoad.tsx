@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { FetchResponse, useFetch } from './utils/fetch_utils';
 import { isDictionary } from './utils/type_utils';
 
@@ -38,6 +39,10 @@ export function CssLoad(props: {domain_str: string}){
         if(isDictionary(response.data, ["path"])){
             return (
                 <link rel="stylesheet" href={response.data.path}/>
+            );
+        }else{
+            return (
+                <div><p>Can Not load</p></div>
             );
         }
       }else{
