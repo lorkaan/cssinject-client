@@ -5,7 +5,7 @@ interface CssResponse{
     path: string;
   }
 
-function CssLoad(props: {domain_str: string}){
+export function CssLoad(props: {domain_str: string}){
 
     const css_url: string = "/api/css/";
 
