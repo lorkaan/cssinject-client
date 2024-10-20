@@ -8,7 +8,7 @@ interface CssResponse{
 
 export function CssLoad(props: {domain_str: string}){
 
-    const css_url: string = "/api/css/";
+    const css_url: string = "api/css/";
 
     const params_record: Record<string, string| null> = {
         "domain": props.domain_str == null ? "": props.domain_str
